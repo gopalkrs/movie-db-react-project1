@@ -31,6 +31,9 @@
     padding: 10px 2px;
     margin-left: 10px;
 }
+.movie-page-rating .fab {
+    padding-right: 3px;
+}
 .fas {
     color: #000000;
 }
@@ -40,9 +43,12 @@
     padding-bottom: 10px;
 }
 .movie-runtime {
-    margin-left: 0px;
+    margin-left: 20px;
     padding-bottom: 10px;
     color: #4E1A3D;
+}
+.movie-runtime .fas {
+    padding-right: 2px;
 }
 .created-by {
     padding-top: 10px;
@@ -127,6 +133,9 @@
     }
     .created-by p{
         font-size: 14px;
+    }
+    .movie-runtime{
+        margin-left: 10px;
     }
 }
 @media screen and (max-width:410px) {
