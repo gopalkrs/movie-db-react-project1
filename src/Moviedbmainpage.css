@@ -8,6 +8,7 @@
 }
 .main-page-images .background-image {
     width: 400px;
+    margin: 10px 0px;
 }
 .main-page-images .background-image-jpg {
     width: 900px;
@@ -49,10 +50,10 @@
 }
 @media screen and (max-width : 350px){
     .main-page-images .background-image {
-        width: 100px;
+        width: 150px;
     }   
     .main-page-images .background-image-jpg {
-        width: 200px;
+        width: 260px;
     }   
 }
 
