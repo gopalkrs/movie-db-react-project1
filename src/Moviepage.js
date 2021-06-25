@@ -34,7 +34,7 @@ class Moviepage extends React.Component {
                         </div>
                         <div className="movie-page-title-rating">
                             <h2 className="movie-page-title">{data.title}</h2>
-                            <h3 className="movie-page-rating"><i class="fas fa-star"></i>{data.rating}</h3>
+                            <h3 className="movie-page-rating"><i class="fab fa-imdb"></i>{data.rating}</h3>
                         </div>
                         <h4 className="movie-page-genre">{data.genre}</h4>
                         <p className="movie-runtime"><i class="fas fa-clock"></i>{data.runtime}</p>

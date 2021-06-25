@@ -229,6 +229,21 @@ const moviesDB = {
         poster:"https://m.media-amazon.com/images/M/MV5BMTYzOTc2NzU3N15BMl5BanBnXkFtZTcwNjY3MDE3NQ@@._V1_SX300.jpg",
         rating:"6.9"
     },
+    madMaxFuryRoad : {
+        title:"Mad Max: Fury Road",
+        year:"2015",
+        released:"15 May 2015",
+        runtime:"120 min",
+        genre:"Action, Adventure, Sci-Fi",
+        director:"George Miller",
+        writer:"George Miller, Brendan McCarthy, Nick Lathouris",
+        actors:"Tom Hardy, Charlize Theron, Nicholas Hoult",
+        plot:"In a post-apocalyptic wasteland, a woman rebels against a tyrannical ruler in search for her homeland with the aid of a group of female prisoners, a psychotic worshiper, and a drifter named Max.",
+        language:"English, Russian",
+        country:"Australia, United States",
+        poster:"https://m.media-amazon.com/images/M/MV5BN2EwM2I5OWMtMGQyMi00Zjg1LWJkNTctZTdjYTA4OGUwZjMyXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg",
+        rating:"8.1"
+    },
     noCountryForOldMen : {
         title:"No Country for Old Men",
         year:"2007",
@@ -364,6 +379,36 @@ const moviesDB = {
         country:"India",
         poster:"https://m.media-amazon.com/images/M/MV5BMDk4Y2Q2MmUtYjE1YS00NjEwLTg0ZGYtOGJkZjUzOTllYzA0L2ltYWdlXkEyXkFqcGdeQXVyNzA0MTg0MzE@._V1_SX300.jpg",
         rating:"7.7"
+    },
+    chhichhore : {
+        title:"Chhichhore",
+        year:"2019",
+        released:"06 Sep 2019",
+        runtime:"143 min",
+        genre:"Comedy, Drama",
+        director:"Nitesh Tiwari",
+        writer:"Piyush Gupta, Nikhil Mehrotra, Nitesh Tiwari",
+        actors:"Sushant Singh Rajput, Shraddha Kapoor, Varun Sharma, Tahir Raj Bhasin",
+        plot:"A tragic incident forces Anirudh, a middle-aged man, to take a trip down memory lane and reminisce his college days along with his friends, who were labelled as losers.",
+        language:"Hindi",
+        country:"India",
+        poster:"https://m.media-amazon.com/images/M/MV5BYjg2ZDI2YTYtN2EwYi00YWI5LTgyMWQtMWFkYmE3NmJkOGVhXkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_SX300.jpg",
+        rating:"8.3"
+    },
+    raazi : {
+        title:"Raazi",
+        year:"2018",
+        released:"11 May 2018",
+        runtime:"138 min",
+        genre:"Action, Drama, Thriller",
+        director:"Meghna Gulzar",
+        writer:"Harinder S. Sikka, Meghna Gulzar, Bhavani Iyer",
+        actors:"Alia Bhatt, Vicky Kaushal, Jaideep Ahlawat, Rajit Kapoor",
+        plot:"A Kashmiri woman agrees to marry a Pakistani army officer in order to spy on Pakistan during the Indo-Pakistan War of 1971.",
+        language:"Hindi",
+        country:"India",
+        poster:"https://m.media-amazon.com/images/M/MV5BZmVhN2JlYjEtZWFkOS00YzE0LThiNDMtMGI3NDA1MTk2ZDQ2XkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_SX300.jpg",
+        rating:"7.8"
     },
 
     andhadhun : {
