@@ -1,0 +1,44 @@
+* {
+    margin: 0 0;
+}
+.nav-bar {
+    background-color: #0000FF;
+    box-shadow: 1px 1px 3px 3px #404040;
+    margin-bottom: 50px;
+}
+.header-logo {
+    color: #EFEBE2;
+    margin-left: 10px;
+}
+.header-link {
+    text-decoration: none;
+    padding-left: 10px;
+}
+
+.styling-buttons {
+    font-size: 18px;
+    padding: 5px;
+    border: none;
+    color: #EFEBE2;
+    background-color: #0000FF;
+    margin-bottom: 10px;
+    margin-right: 5px;
+    text-decoration: underline;
+}
+.styling-buttons:hover {
+    color: #013a20;
+}
+.button-movies {
+    margin-left: 10px;
+}
+.styling-buttons:hover {
+    cursor: pointer;
+}
+@media screen  and (max-width:429px) {
+    .header-logo {
+        font-size: 25px;
+    }
+    .styling-buttons {
+        font-size: 16px;
+    }
+}

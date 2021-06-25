@@ -1,0 +1,36 @@
+* {
+    margin: 0 0;
+}
+.footer-section {
+    background-color: #013a20;
+    text-align: center;
+    padding: 10px;
+    margin-top: 40px;
+    margin-bottom: 0px;
+}
+.fas {
+    color: #efebe2;
+    font-size: 22px;
+    margin: 10px 20px;
+}
+.social-media a{
+    color: #efebe2;
+}
+.social-media a .fas{
+    color: #efebe2;
+    font-size: 22px;
+}
+.fab {
+    color: #efebe2;
+    font-size: 22px;
+}
+.footer-para {
+    color: #efebe2;
+    border-top: 1px solid rgba(239,235,226,0.2);
+    padding: 10px 0px;
+}
+@media screen  and (max-width:429px) {
+    .footer-para {
+        font-size: 12px;
+    }
+}

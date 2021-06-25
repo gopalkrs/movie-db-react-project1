@@ -1,0 +1,16 @@
+.section-homepage {
+    padding-top: 50px;
+    height: 100%;
+}
+.movie-list-homepage {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: center;
+    padding: 15px;
+}
+@media screen  and (max-width:455px) {
+    .movie-list-homepage {
+        gap: 20px;
+    }
+}

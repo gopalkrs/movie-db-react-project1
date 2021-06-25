@@ -1,0 +1,132 @@
+.section-moviepage {
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 10px;
+    background-color: #2FF3E0;
+
+}
+.movie-page-title-rating {
+    display: flex;
+}
+.movie-page-poster-container img{
+    width: 250px;
+}
+.movie-page-poster-container {
+   padding-left: 20px;
+   display: flex;
+}
+.movie-page-title{
+    color: black;
+    padding : 10px 0px;
+    padding-left: 20px;
+}
+.movie-page-plot {
+    padding-left: 20px;
+}
+.movie-page-plot h4 {
+    color: #4E1A3D;
+}
+.movie-page-rating {
+    color: #000000;
+    padding: 10px 2px;
+    margin-left: 10px;
+}
+.fas {
+    color: #72cc1e;
+}
+.movie-page-genre {
+    padding-left: 20px;
+    color: #4E1A3D;
+    padding-bottom: 10px;
+}
+.movie-runtime {
+    margin-left: 10px;
+    padding-bottom: 10px;
+    color: #4E1A3D;
+}
+.created-by {
+    padding-top: 10px;
+    padding-left: 20px;
+}
+.actors-movie-page {
+    padding-top: 10px;
+    padding-left: 20px;
+}
+.title-fields-movie-page {
+    color: #4E1A3D;
+}
+.movie-page-plot .title-fields-movie-page {
+    color: #4E1A3D;
+}
+.movie-page-country-lang {
+    margin-left: 10px;
+    border-radius: 15px;
+    width: fit-content;
+    padding: 5px;
+    margin-bottom: 10px;
+    color: #000000;
+}
+.movie-page-country-lang .fas {
+    color: #000000;
+}
+.moviepage-country {
+    padding-bottom: 5px;
+}
+.released-date-movie-page {
+    padding-left: 20px;
+    padding-bottom: 10px;
+}
+.released-date-movie-page h4 {
+    color: #4E1A3D;
+}
+@media screen and (max-width:575px){
+    .movie-page-plot p{
+        font-size: 14px;
+    }
+    .movie-page-plot {
+        padding-left: 10px;
+    }
+    .movie-page-genre {
+        padding-left: 10px;
+    }
+    .released-date-movie-page {
+        padding-left: 10px;
+    }
+    .movie-page-country-lang {
+        font-size: 14px;
+    }
+    .movie-page-poster-container img{
+        width: 170px;
+    }
+    .movie-page-poster-container {
+        padding-left: 10px;
+    }
+    .movie-page-rating {
+        font-size: 14px;
+        padding: 8px 2px;
+    }
+    .movie-page-title {
+        font-size: 18px;
+        padding-left: 10px;
+    }
+    .fas {
+        font-size: 15px;
+    }
+    .actors-movie-page p{
+        font-size: 14px;
+    }
+    .actors-movie-page {
+        padding-left: 10px;
+    }
+    .created-by {
+        padding-left: 10px;
+    }
+    .created-by p{
+        font-size: 14px;
+    }
+}
+@media screen and (max-width:410px) {
+    .movie-page-poster-container img{
+        width: 140px;
+    }
+}
