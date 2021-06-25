@@ -28,16 +28,16 @@ class Seriespage extends React.Component {
                     <div className="movie-page-top-part">
                         <div className="movie-page-poster-container">
                             <img src={data.poster} alt={data.title}/>
+                            <div className="movie-page-country-lang">
+                                <p className="moviepage-country"><i class="fas fa-globe-asia"></i>  {data.country}</p>
+                                <p><i class="fas fa-language"></i> {data.language}</p>
+                            </div>
                         </div>
                         <div className="movie-page-title-rating">
                             <h3 className="movie-page-title">{data.title}</h3>
                             <h3 className="movie-page-rating"><i class="fas fa-star"></i> {data.rating}</h3>
                         </div>
                         <h4 className="movie-page-genre">{data.genre}</h4>
-                        <div className="movie-page-country-lang">
-                            <p className="moviepage-country"><i class="fas fa-globe-asia"></i>  {data.country}</p>
-                            <p><i class="fas fa-language"></i> {data.language}</p>
-                        </div>
                         <p className="movie-runtime"><i class="fas fa-clock"></i> {data.runtime}</p>
                     </div>
                     <div className="movie-page-plot"><h4>Overview : </h4><p>{data.plot}</p></div>
