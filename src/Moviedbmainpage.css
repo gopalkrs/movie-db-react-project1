@@ -7,11 +7,15 @@
     height: 100%;
 }
 .main-page-images .background-image {
-    width: 400px;
-    margin: 10px 0px;
+    width: 200px;
+    margin: 10px 5px;
 }
 .main-page-images .background-image-jpg {
-    width: 900px;
+    width: 90%;
+}
+.svg-images-main-page {
+    display: flex;
+    gap: 10px;
 }
 .main-page-images {
     display: flex;
@@ -26,20 +30,23 @@
 
 @media screen and (max-width : 980px){
     .main-page-images .background-image-jpg {
-        width: 700px;
+        width: 90%;
     }   
 }
 @media screen and (max-width : 770px){
     .main-page-images .background-image-jpg {
-        width: 500px;
+        width: 90%;
+    }   
+    .main-page-images .background-image {
+        width: 150px;
     }   
 }
 @media screen and (max-width : 570px){
     .main-page-images .background-image {
-        width: 200px;
+        width: 100px;
     }   
     .main-page-images .background-image-jpg {
-        width: 300px;
+        width: 90%;
     }   
 }
 
@@ -50,7 +57,7 @@
 }
 @media screen and (max-width : 350px){
     .main-page-images .background-image {
-        width: 150px;
+        width: 80px;
     }   
     .main-page-images .background-image-jpg {
         width: 260px;
