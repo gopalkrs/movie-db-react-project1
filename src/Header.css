@@ -2,13 +2,13 @@
     margin: 0 0;
 }
 .nav-bar {
-    background-color: #000000;
+    background-color: #0C1446;
     box-shadow: 1px 1px 3px 3px #404040;
     margin-bottom: 50px;
 }
 .header-logo {
     color: #EFEBE2;
-    
+    padding-left: 20px;
 }
 .header-link {
     text-decoration: none;
@@ -26,7 +26,7 @@
     text-decoration: underline;
 }
 .styling-buttons:hover {
-    color: #013a20;
+    color: #999999;
 }
 .button-movies {
     margin-left: 10px;
