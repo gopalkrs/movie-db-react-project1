@@ -6,7 +6,7 @@ function Header() {
         <div className="nav-bar">
             <div className="section-nav-bar">
                 <Link to="/" className="header-link">
-                    <h1 className="header-logo">FilmaticDB</h1>
+                    <h1 className="header-logo">FilmaticDB <i class="fas fa-theater-masks"></i></h1>
                 </Link>
                 <div className="button-movies">
                     <Link to="/movies">
