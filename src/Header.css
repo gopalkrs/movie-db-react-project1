@@ -14,6 +14,9 @@
     text-decoration: none;
     margin-left: 20px;
 }
+.header-link:hover {
+    background-color: transparent;
+}
 .header-logo .fas {
     color: #EFEBE2;
 }
@@ -28,6 +31,7 @@
 }
 .styling-buttons:hover {
     color: #999999;
+    border: none;
 }
 .button-movies {
     margin-left: 20px;
