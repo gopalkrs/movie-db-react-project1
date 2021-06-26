@@ -76,6 +76,36 @@ const moviesDB = {
         poster:"https://m.media-amazon.com/images/M/MV5BYTJlZWY2YjYtZGIxMy00MDEwLTliNzMtZGM3MDQ1NzlmNDY1XkEyXkFqcGdeQXVyNDY2MjcyOTQ@._V1_SX300.jpg",
         rating:"7.6"
     },
+    theMatrix : {
+        title:"The Matrix",
+        year:"1999",
+        released:"31 Mar 1999",
+        runtime:"136 min",
+        genre:"Action, Sci-Fi",
+        director:"Lana Wachowski, Lilly Wachowski",
+        writer:"Lilly Wachowski, Lana Wachowski",
+        actors:"Keanu Reeves, Laurence Fishburne, Carrie-Anne Moss",
+        plot:"When a beautiful stranger leads computer hacker Neo to a forbidding underworld, he discovers the shocking truth--the life he knows is the elaborate deception of an evil cyber-intelligence.",
+        language:"English",
+        country:"United States, Australia",
+        poster:"https://m.media-amazon.com/images/M/MV5BNzQzOTk3OTAtNDQ0Zi00ZTVkLWI0MTEtMDllZjNkYzNjNTc4L2ltYWdlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg",
+        rating:"8.7"
+    },
+    seven : {
+        title:"Se7en",
+        year:"1995",
+        released:"22 Sep 1995",
+        runtime:"127 min",
+        genre:"Crime, Drama, Mystery",
+        director:"David Fincher",
+        writer:"Andrew Kevin Walker",
+        actors:"Morgan Freeman, Brad Pitt, Kevin Spacey",
+        plot:"Two detectives, a rookie and a veteran, hunt a serial killer who uses the seven deadly sins as his motives.",
+        language:"English",
+        country:"United States",
+        poster:"https://m.media-amazon.com/images/M/MV5BOTUwODM5MTctZjczMi00OTk4LTg3NWUtNmVhMTAzNTNjYjcyXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg",
+        rating:"8.6"
+    },
     goneGirl : {
         title:"Gone Girl",
         year:"2014",
@@ -426,6 +456,36 @@ const moviesDB = {
         country:"India",
         poster:"https://m.media-amazon.com/images/M/MV5BZWZhMjhhZmYtOTIzOC00MGYzLWI1OGYtM2ZkN2IxNTI4ZWI3XkEyXkFqcGdeQXVyNDAzNDk0MTQ@._V1_SX300.jpg",
         rating:"8.2"
+    },
+    lailaMajnu : {
+        title:"Laila Majnu",
+        year:"2018",
+        released:"07 Sep 2018",
+        runtime:"140 min",
+        genre:"Drama, Romance",
+        director:"Sajid Ali",
+        writer:"Imtiaz Ali, Sajid Ali",
+        actors:"Avinash Tiwary, Tripti Dimri, Sumit Kaul",
+        plot:"Taking the leap out of the classic folklore, the story is set in today's time in Kashmir where Laila Majnu have problems relevant to the youth of today. While dealing with their feuding families a passionate love story unravels.",
+        language:"Hindi",
+        country:"India",
+        poster:"https://m.media-amazon.com/images/M/MV5BZWZjODA1MmUtYmU0My00M2JiLTk2ODEtYzMxODJmMTM5MzY1XkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_SX300.jpg",
+        rating:"7.7"
+    },
+    thappad : {
+        title:"Thappad",
+        year:"2020",
+        released:"28 Feb 2020",
+        runtime:"142 min",
+        genre:"Drama",
+        director:"Anubhav Sinha",
+        writer:"Mrunmayee Lagoo, Anubhav Sinha",
+        actors:"Taapsee Pannu, Pavail Gulati, Kumud Mishra",
+        plot:"Thappad is a story of Amrita whose seemingly perfect life is shattered when her husband slaps her once in a party. But is one slap enough to question what a relationship stands for?",
+        language:"Hindi",
+        country:"India",
+        poster:"https://m.media-amazon.com/images/M/MV5BNWQ1Yzc2NDYtN2RjNC00ZGIyLWJkMjItMDlkODVhNjg0OTczXkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_SX300.jpg",
+        ratings:"6.8"
     },
     karwaan : {
         title:"Karwaan",

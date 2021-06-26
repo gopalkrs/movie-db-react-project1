@@ -40,9 +40,13 @@ class Seriespage extends React.Component {
                         <h4 className="movie-page-genre">{data.genre}</h4>
                         <p className="movie-runtime"><i class="fas fa-clock"></i> {data.runtime}</p>
                     </div>
+                    <div className="released-date-movie-page">
+                        <h4>Released</h4>
+                        <p>{data.released}</p>
+                    </div>
                     <div className="movie-page-plot"><h4>Overview : </h4><p>{data.plot}</p></div>
                     <div className="created-by">
-                        <h4 className="title-fields-movie-page">Director</h4>
+                        <h4 className="title-fields-movie-page">Creator/Director</h4>
                         <p>{data.director}</p>
                     </div>
                     <div className="actors-movie-page">
