@@ -44,7 +44,7 @@ class Seriespage extends React.Component {
                         <h4>Released</h4>
                         <p>{data.released}</p>
                     </div>
-                    <div className="movie-page-plot"><h4>Overview : </h4><p>{data.plot}</p></div>
+                    <div className="movie-page-plot"><h4>Overview </h4><p>{data.plot}</p></div>
                     <div className="created-by">
                         <h4 className="title-fields-movie-page">Creator/Director</h4>
                         <p>{data.director}</p>
