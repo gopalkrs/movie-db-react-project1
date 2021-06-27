@@ -50,6 +50,10 @@ class Seriespage extends React.Component {
                         <p>{data.director}</p>
                     </div>
                     <div className="actors-movie-page">
+                        <h4 className="title-fields-movie-page">Writer(s) </h4>
+                        <p>{data.writer}</p>
+                    </div>
+                    <div className="actors-movie-page">
                         <h4 className="title-fields-movie-page">Actors </h4>
                         <p>{data.actors}</p>
                     </div>
