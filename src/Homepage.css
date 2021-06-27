@@ -1,6 +1,7 @@
 .section-homepage {
-    padding-top: 50px;
     height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 .movie-list-homepage {
     display: flex;
