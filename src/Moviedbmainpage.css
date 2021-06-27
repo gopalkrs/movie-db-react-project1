@@ -1,6 +1,7 @@
 .whole-page-body {
     display: flex;
     flex-direction: column;
+    justify-content: end;
     height: 100%;
 }
 .main-page-body {

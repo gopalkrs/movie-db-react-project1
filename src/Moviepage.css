@@ -2,9 +2,10 @@
     margin-left: 20px;
     margin-right: 20px;
     padding: 10px;
-    background-color: #b4fefb;
+    background-color: #4dffff;
     display: flex;
     flex-direction: column;
+    justify-content: end;
 }
 .movie-page-title-rating {
     display: flex;
