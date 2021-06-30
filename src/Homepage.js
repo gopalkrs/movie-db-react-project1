@@ -23,7 +23,7 @@ class Homepage extends React.Component {
         const { movies } = this.state;
 
         return (
-            <div>
+            <div className="homepage-main-container">
                 <Header/>
                 <div className="section-homepage">
                     <div className="movie-list-homepage">
