@@ -8,11 +8,14 @@
     display: block;
   }
 .movie-list-item {
-    background-color: #050B1F;
+    background-color: #050b1f;
     padding: 15px;
     text-decoration: none;
     box-shadow: 3px 3px 8px #404040;
     width: 180px;
+}
+.movie-list-item:hover {
+    background-color: #03103a;
 }
 
 @media screen  and (max-width:770px){
