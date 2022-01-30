@@ -1,25 +1,20 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Header from "./Header";
 import Footer from "./Footer";
+import "./styles/Moviepage.css";
 
-class Moviepage extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state={ data: {} };
-    }
-    componentDidMount() {
-        this.fetchData();
-    }
-    fetchData() {
-        const movieId=this.props.match.params.movieId;
+function Moviepage(props) {
+    const [data, setData]=useState([]);
+
+    useEffect(()=>{
+        const movieId=props.match.params.movieId;
         fetch(`/api/movies/${movieId}`)
         .then((response)=>response.json())
-        .then((data)=>{
-            this.setState( {data} );
+        .then((movieinfo)=>{
+            setData(movieinfo);
         });
-    }
-    render() {
-        const {data} = this.state;
+    },[data]);
+
         return (
             <div className="movie-page-wrapper">
                 <Header />
@@ -60,7 +55,6 @@ class Moviepage extends React.Component {
                 <Footer />
             </div>
         );
-    }
 }
 
 export default Moviepage;

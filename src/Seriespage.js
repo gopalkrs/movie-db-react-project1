@@ -1,27 +1,22 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Header from "./Header";
-import "./Moviepage.css";
+import "./styles/Moviepage.css";
 import Footer from "./Footer";
 
-class Seriespage extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state={ data: {} };
-    }
-    componentDidMount() {
-        this.fetchData();
-    }
-    fetchData() {
-        const seriesId=this.props.match.params.seriesId;
+function Seriespage(props) {
+    
+    const [data, setData] = useState([]);
+    
+    useEffect(()=>{
+        const seriesId=props.match.params.seriesId;
         fetch(`/api/series/${seriesId}`)
         .then((response)=>response.json())
-        .then((data)=>{
-            this.setState( {data} );
+        .then((seriesdata)=>{
+            setData(seriesdata)
         });
-    }
-    render() {
-        const {data} = this.state;
-        return (
+    },[data]);
+
+    return (
             <div className="movie-page-wrapper">
                 <Header />
                 <div className="section-moviepage">
@@ -62,7 +57,6 @@ class Seriespage extends React.Component {
                 <Footer />
             </div>
         );
-    }
 }
 
 export default Seriespage;

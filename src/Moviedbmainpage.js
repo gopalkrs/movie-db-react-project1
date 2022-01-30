@@ -1,9 +1,10 @@
 import Header from "./Header";
+import { Link } from "react-router-dom";
 import Footer from "./Footer";
-import "./Moviedbmainpage.css";
-import Moviessvg from "./moviessvg.svg";
-import Backgroundimg from "./background.jpg";
-import Videostreaming from "./Videostreaming.svg"
+import "./styles/Moviedbmainpage.css";
+import Moviessvg from "./images/moviessvg.svg";
+import Backgroundimg from "./images/background.jpg";
+import Videostreaming from "./images/Videostreaming.svg"
 
 
 function Moviedbmainpage() {
@@ -12,14 +13,18 @@ function Moviedbmainpage() {
             <Header />
             <div className="main-page-body">
                 <div>
-                    <h4 className="main-page-headline">Welcome, Lots of Movies and TV shows to discover here...Explore now.</h4>
+                    <h4 className="main-page-headline">Library of Movies and TV shows to discover here...Explore now.</h4>
                     <div className="main-page-images">
                         <div className="svg-images-main-page">
-                            <img className= "background-image" alt= "streaming-image" src={Videostreaming}/>
-                            <img className= "background-image" alt= "stream-image" src={Moviessvg}/>
-                        </div>
-                        <img className= "background-image-jpg" alt= "background-image-movies" src={Backgroundimg}/>
+                            <img className= "background-image" alt= "streaming" src={Videostreaming}/>
+                            <img className= "background-image" alt= "stream" src={Moviessvg}/>
+                        </div> 
                     </div>
+                    <h4 className="main-page-headline">Sign In to rate and review your favorite movies/series.</h4>
+                </div>
+                <div className="button-movies">
+                    <button className="styling-buttons"><Link to="/movies" className="link-text">Movies</Link></button>
+                    <button className="styling-buttons"><Link to="/series" className="link-text">Series </Link></button>
                 </div>
             </div>
             <Footer />

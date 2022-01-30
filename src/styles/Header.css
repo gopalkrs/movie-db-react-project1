@@ -1,0 +1,31 @@
+* {
+    margin: 0 0;
+}
+.nav-bar {
+    background-color: #e7d509;
+    box-shadow: 1px 1px 3px 3px #404040;
+    margin-bottom: 50px;
+}
+.header-logo {
+    color: #050b1f;
+    padding: 20px;
+}
+.header-link {
+    text-decoration: none;
+    margin-left: 20px;
+}
+.header-link:hover {
+    background-color: transparent;
+}
+.header-logo .fas {
+    color: #050b1f;
+}
+
+@media screen  and (max-width:429px) {
+    .header-logo {
+        font-size: 25px;
+    }
+    .styling-buttons {
+        font-size: 16px;
+    }
+}

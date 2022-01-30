@@ -1,27 +1,20 @@
-import React from 'react';
+import React,{ useState, useEffect } from 'react';
 import SerieslistBox from './SerieslistBox';
 import Header from './Header';
-import "./Homepage.css"
+import "./styles/Homepage.css"
 import Footer from './Footer';
 
-class Homepageseries extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = { series : [] };
-    }
-    componentDidMount(){
-        this.fetchData();
-    }
-    fetchData() {
+function Homepageseries() {
+    
+    const [series,setSeries] = useState([]);
+    
+    useEffect(()=>{
         fetch(`/api/series`)
         .then((response)=>response.json())
-        .then((series)=>{
-            this.setState({series});
+        .then((data)=>{
+            setSeries(data);
         });
-    }
-    render() {
-        const { series } = this.state;
-
+    },[series])
         return (
             <div>
                 <Header/>
@@ -45,6 +38,5 @@ class Homepageseries extends React.Component {
                 <Footer />
             </div>
         );
-    }
 }
 export default Homepageseries;

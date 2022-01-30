@@ -1,50 +1,42 @@
-import React from 'react';
+import React, { useState,useEffect } from 'react';
 import MovielistBox from './MovielistBox';
 import Header from './Header';
-import "./Homepage.css"
+import './styles/Homepage.css';
 import Footer from './Footer';
 
-class Homepage extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = { movies : [] };
-    }
-    componentDidMount(){
-        this.fetchData();
-    }
-    fetchData() {
+function Homepage(){
+    const [movies, setMovies] = useState([]);
+
+    useEffect(()=>{
         fetch(`/api/movies`)
         .then((response)=>response.json())
-        .then((movies)=>{
-            this.setState({movies});
+        .then((data)=>{
+            setMovies(data);
         });
-    }
-    render() {
-        const { movies } = this.state;
+    },[movies])
 
-        return (
-            <div className="homepage-main-container">
-                <Header/>
-                <div className="section-homepage">
-                    <div className="movie-list-homepage">
-                        {movies.map((movie)=>{
-                            const {id,title,poster,rating,genre} = movie;
-                           return (
-                               <MovielistBox
-                               key={id}
-                               id={id}
-                               title={title}
-                               rating={rating}
-                               poster={poster}
-                               genre={genre}
-                               />
-                           );
-                        })}
-                    </div>
+    return (
+        <div className="homepage-main-container">
+            <Header/>
+            <div className="section-homepage">
+                <div className="movie-list-homepage">
+                    {movies.map((movie)=>{
+                        const {id,title,poster,rating,genre} = movie;
+                        return (
+                            <MovielistBox
+                            key={id}
+                            id={id}
+                            title={title}
+                            rating={rating}
+                            poster={poster}
+                            genre={genre}
+                            />
+                        );
+                    })}
                 </div>
-                <Footer/>
             </div>
-        );
-    }
+        <Footer />
+        </div>
+    );
 }
 export default Homepage;

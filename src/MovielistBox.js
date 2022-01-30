@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-import "./MovielistBox.css";
+import "./styles/MovielistBox.css";
 
 function MovielistBox(props) {
     const { id,title,poster,rating,genre } = props;
