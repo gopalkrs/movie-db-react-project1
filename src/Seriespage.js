@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Header from "./Header";
 import "./styles/Moviepage.css";
 import Footer from "./Footer";
+import Reviews from "./reviews/Reviews";
 
 function Seriespage(props) {
     
@@ -52,7 +53,9 @@ function Seriespage(props) {
                         <h4 className="title-fields-movie-page">Actors </h4>
                         <p>{data.actors}</p>
                     </div>
-
+                    <div className="rating-reviews">
+                        <Reviews />
+                    </div>
                 </div>
                 <Footer />
             </div>

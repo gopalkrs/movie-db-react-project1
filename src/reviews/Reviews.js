@@ -4,7 +4,7 @@ import React, { useState, useEffect, useRef } from "react";
 
 function Reviews(){
 
-    const [reviews, setReviews] = useState({});
+    let [reviews, setReviews] = useState({});
     const reviewRef= useRef();
     const ratingRef = useRef();
 
@@ -12,6 +12,7 @@ function Reviews(){
     const submitHandler=async (e)=>{
         e.preventDefault();
         reviews = {review: reviewRef.current.value, rating: ratingRef.current.value};
+        console.log(reviews);
     }
 
     return (
