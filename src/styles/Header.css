@@ -2,14 +2,39 @@
     margin: 0 0;
 }
 .nav-bar {
-    background-color: #e7d509;
-    box-shadow: 1px 1px 3px 3px #404040;
+    background-color: #03071e;
+    box-shadow: 1px 1px 3px 2px #404040;
     margin-bottom: 50px;
 }
+.section-nav-bar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.login-buttons{
+    display: flex;
+    justify-content: center;
+    padding-right: 20px;
+}
+.login-buttons button{
+    background-color: transparent;
+    padding: 2px 5px;
+    border: 1px solid #fff;
+    cursor: pointer;
+    margin-left: 3px;
+    font-weight: bold;
+    font-family: 'Dongle', sans-serif;
+    border-radius: 5px;
+    color: #fff;
+    font-size: large;
+}
+
 .header-logo {
-    color: #050b1f;
+    color: #ffffff;
     padding: 20px;
 }
+
 .header-link {
     text-decoration: none;
     margin-left: 20px;
@@ -25,7 +50,11 @@
     .header-logo {
         font-size: 25px;
     }
-    .styling-buttons {
-        font-size: 16px;
+    .login-buttons button{
+        padding: 3px;
+        font-size: small;
+    }
+    .header-logo {
+        padding: 10px;
     }
 }

@@ -1,10 +1,7 @@
-const express = require('express');
+const seriesDB = require("./contents-data/series_data");
+const seriesReviews = require('./content-schemas/seriesschema');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
-const router = express.Router();
-const movies = require("./moviedb/movies");
-const series = require("./moviedb/series");
-const user = require('./user/user');
 
 dotenv.config();
 
@@ -21,10 +18,11 @@ mongoose.connect(URI, {
     console.error("Error connecting mongo", err.message)
 });
 
-
-router.use("/movies",movies);
-router.use("/series",series);
-router.use("/user",user);
-
-module.exports = router;
-
+Object.keys(seriesDB).forEach((movie)=>{
+    const review = new seriesReviews({id: movie});
+    review.save().then((data)=>{
+        console.log(data);
+    }).catch((err)=>{
+        console.log(err);
+    });
+})

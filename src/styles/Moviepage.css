@@ -9,8 +9,7 @@
     margin-left: 20px;
     margin-right: 20px;
     padding: 10px;
-    background-color: #4dffff;
-    
+    background-color: #ffc300;
 }
 .movie-page-title-rating {
     display: flex;
@@ -96,9 +95,15 @@
 .released-date-movie-page h4 {
     color: #4E1A3D;
 }
+
+
+/*REVIEW RATING STYLES */
+
+
 @media screen and (max-width:575px){
+    
     .movie-page-plot p{
-        font-size: 14px;
+        font-size: 18px;
     }
     .movie-page-plot {
         padding-left: 5px;
@@ -110,7 +115,7 @@
         padding-left: 5px;
     }
     .movie-page-country-lang {
-        font-size: 14px;
+        font-size: 18px;
     }
     .movie-page-poster-container img{
         width: 170px;
@@ -119,18 +124,18 @@
         padding-left: 10px;
     }
     .movie-page-rating {
-        font-size: 14px;
+        font-size: 18px;
         padding: 8px 2px;
     }
     .movie-page-title {
-        font-size: 18px;
+        font-size: 22px;
         padding-left: 5px;
     }
     .fas {
         font-size: 15px;
     }
     .actors-movie-page p{
-        font-size: 14px;
+        font-size: 18px;
     }
     .actors-movie-page {
         padding-left: 5px;
@@ -139,7 +144,7 @@
         padding-left: 5px;
     }
     .created-by p{
-        font-size: 14px;
+        font-size: 18px;
     }
     .movie-runtime{
         margin-left: 5px;

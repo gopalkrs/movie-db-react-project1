@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-const seriesDB = require("./series_data");
+const seriesDB = require("./contents-data/series_data");
 router.get("/",(req,res)=>{
     const serieslist = [];
     Object.keys(seriesDB).forEach((seriesId)=>{

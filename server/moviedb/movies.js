@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-const moviesDB = require("./movie_datas");
+const moviesDB = require("./contents-data/movie_datas");
 router.get("/",(req,res)=>{
     const movielist = [];
     Object.keys(moviesDB).forEach((movieId)=>{

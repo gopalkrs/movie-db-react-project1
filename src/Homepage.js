@@ -6,15 +6,15 @@ import Footer from './Footer';
 
 function Homepage(){
     const [movies, setMovies] = useState([]);
-
+    
     useEffect(()=>{
         fetch(`/api/movies`)
         .then((response)=>response.json())
         .then((data)=>{
             setMovies(data);
         });
-    },[movies])
-
+    },[movies]);
+    
     return (
         <div className="homepage-main-container">
             <Header/>

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 import "./styles/Moviepage.css";
+import Reviews from "./reviews/Reviews";
 
 function Moviepage(props) {
     const [data, setData]=useState([]);
@@ -51,6 +52,9 @@ function Moviepage(props) {
                         <h4 className="title-fields-movie-page">Actors </h4>
                         <p>{data.actors}</p>
                     </div>
+                </div>
+                <div className="rating-reviews">
+                    <Reviews />
                 </div>
                 <Footer />
             </div>

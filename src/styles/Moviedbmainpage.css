@@ -8,22 +8,17 @@
 .main-page-body {
     height: 100%;
 }
-.main-page-images .background-image {
-    width: 200px;
+.main-page-images img{
+    width:25%;
     margin: 10px 5px;
 }
-.main-page-images .background-image-jpg {
-    width: 90%;
-}
-.svg-images-main-page {
-    display: flex;
-    gap: 40px;
-}
+
 .main-page-images {
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    gap: 50px;
 }
 .main-page-headline {
     text-align: center;
@@ -38,21 +33,22 @@
 
 .button-movies button{
     background-color: transparent;
-    padding: 8px;
+    padding: 6px;
     margin: 6px;
     border: 2px solid black;
     text-decoration: none;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 .link-text{
     text-decoration: none;
-    color: #050b1f;
+    color: #000;
     font-size: large;
 }
 .styling-buttons:hover{
     color: white;
-    background-color: red;
-    border: 2px solid black;
-    transition: all 0.5s ease;
+    background-color: #cfd6ee;
+    border: 2px solid #000000;
+    transition: all 0.3s ease;
 }
 
 .signin-para{
@@ -60,14 +56,10 @@
     margin: 20px 0px 10px 0px;
 }
 
-@media screen and (max-width : 980px){
-    .main-page-images .background-image-jpg {
-        width: 90%;
-    }   
-}
+
 @media screen and (max-width : 770px){
     .main-page-images .background-image-jpg {
-        width: 90%;
+        width: 30%;
     }   
     .main-page-images .background-image {
         width: 150px;
