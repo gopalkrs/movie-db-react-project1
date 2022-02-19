@@ -30,6 +30,7 @@
     font-size: 25px;
     width: 50%;
     resize: none;
+    border: 1px solid #000;
 }
 .submit-btns-div{
     text-align: center;
