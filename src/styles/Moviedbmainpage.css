@@ -23,7 +23,7 @@
 .main-page-headline {
     text-align: center;
     margin: 10px 5px;
-    color: red;
+    color: #000;
 }
 
 .button-movies{
@@ -33,21 +33,21 @@
 }
 
 .button-movies button{
-    background-color: transparent;
-    padding: 6px;
+    background-color: #03071e;
+    padding: 3px;
     margin: 6px;
     border: 2px solid black;
     text-decoration: none;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family:'Dongle', sans-serif;
 }
 .link-text{
     text-decoration: none;
-    color: #000;
-    font-size: large;
+    color: #fff;
+    font-size: 22px;
 }
 .styling-buttons:hover{
     color: white;
-    background-color: #cfd6ee;
+    background-color: #404040;
     border: 2px solid #000000;
     transition: all 0.3s ease;
 }
