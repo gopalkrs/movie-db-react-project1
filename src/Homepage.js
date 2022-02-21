@@ -3,18 +3,32 @@ import MovielistBox from './MovielistBox';
 import Header from './Header';
 import './styles/Homepage.css';
 import Footer from './Footer';
+import { HashLoader } from 'react-spinners';
 
 function Homepage(){
     const [movies, setMovies] = useState([]);
-    
+    const [loading, setLoading] = useState(true);
     useEffect(()=>{
         fetch(`/api/movies`)
         .then((response)=>response.json())
         .then((data)=>{
             setMovies(data);
+            setLoading(false);
         });
     },[movies]);
-    
+
+    if(loading){
+        return (
+            <div>
+                <Header />
+                <div className='spinner-comp'>
+                    <HashLoader loading size={140} color='#e64242'/>
+                </div>
+                <Footer />
+            </div>
+        );
+    }
+
     return (
         <div className="homepage-main-container">
             <Header/>

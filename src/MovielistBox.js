@@ -5,6 +5,7 @@ import "./styles/MovielistBox.css";
 function MovielistBox(props) {
 
     const { id,title,poster,rating,genre } = props;
+
     return (
         <Link to={`/movies/${id}`} className = "movie-list-item">
             <div className="movie-list-item-wrapper">

@@ -5,8 +5,12 @@ import axios from 'axios';
 
 function LoginForm({isLogin, setIsLogin, setRegState, regState, setPopupForm, popupForm}) {
 
-    const [userReg, setUserReg] = useState({
+    const [signupData, setsignupData] = useState({
         username : "",
+        email : "",
+        password : ""
+    });
+    const [loginData, setloginData] = useState({
         email : "",
         password : ""
     });
@@ -17,22 +21,39 @@ function LoginForm({isLogin, setIsLogin, setRegState, regState, setPopupForm, po
             visibility : "hidden",
             opacity : "0"
         });
-        setUserReg({ username: "", email: "", password: ""});
+        if(!isLogin){
+            setsignupData({ username: "", email: "", password: ""});
+        }
+        if(isLogin){
+            setloginData({ email: "", password: ""});
+        }
     }
 
     const inputHandler=(e)=>{
         const name = e.target.name;
         const value = e.target.value;
-        setUserReg({...userReg, [name] : value});
+        if(!isLogin){
+            setsignupData({...signupData, [name] : value});
+        }
+        if(isLogin){
+            setloginData({...loginData, [name] : value});
+        }
     }
 
     const handleSubmit = async (e)=>{
         e.preventDefault();
-        const newRecord = {...userReg, id : uuidv4()};
-        console.log(newRecord);
         if(!isLogin){
+            const postSignup = {...signupData, id : uuidv4()};
             try{
-                const promiseData = await axios.post(`/api/user/signup`, newRecord);
+                const promiseData = await axios.post(`/api/user/signup`, postSignup);
+            }catch(err){
+                console.log(err);
+            }
+        }
+        if(isLogin){
+            const postLogin = {...loginData, id : uuidv4()};
+            try{
+                const promiseData = await axios.post(`/api/user/login`, postLogin);
             }catch(err){
                 console.log(err);
             }
@@ -54,7 +75,7 @@ function LoginForm({isLogin, setIsLogin, setRegState, regState, setPopupForm, po
                     <label htmlFor="username">FullName</label>
                     <input type="text" required
                     autoComplete="off"
-                    value={userReg.username}
+                    value={signupData.username}
                     onChange={inputHandler}
                     name="username" id="username" />
                 </div>
@@ -63,7 +84,7 @@ function LoginForm({isLogin, setIsLogin, setRegState, regState, setPopupForm, po
                     <label htmlFor="email">Email</label>
                     <input type="email" required
                     autoComplete="off"
-                    value={userReg.email}
+                    value={signupData.email}
                     onChange={inputHandler}
                     name="email" id="email" />
                 </div>
@@ -72,7 +93,7 @@ function LoginForm({isLogin, setIsLogin, setRegState, regState, setPopupForm, po
                     <label htmlFor="password">Password</label>
                     <input type="password" required
                     autoComplete="off"
-                    value={userReg.password}
+                    value={signupData.password}
                     onChange={inputHandler}
                     name="password" id="password" />
                 </div>
