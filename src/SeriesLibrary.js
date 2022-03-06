@@ -1,8 +1,8 @@
 import React,{ useState, useEffect } from 'react';
-import SerieslistBox from './SerieslistBox';
-import Header from './Header';
+import SeriesCard from './components/SeriesCard';
+import Header from './components/Header';
 import "./styles/Homepage.css"
-import Footer from './Footer';
+import Footer from './components/Footer';
 import { HashLoader } from 'react-spinners';
 
 function Homepageseries() {
@@ -17,7 +17,7 @@ function Homepageseries() {
             setSeries(data);
             setLoading(false);
         });
-    },[series]);
+    },[]);
 
     if(loading){
         return (
@@ -38,7 +38,7 @@ function Homepageseries() {
                         {series.map((serie)=>{
                             const {id,title,poster,rating,genre} = serie;
                            return (
-                               <SerieslistBox
+                               <SeriesCard
                                key={id}
                                id={id}
                                title={title}

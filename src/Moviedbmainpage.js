@@ -1,6 +1,6 @@
-import Header from "./Header";
+import Header from "./components/Header";
 import { Link } from "react-router-dom";
-import Footer from "./Footer";
+import Footer from "./components/Footer";
 import "./styles/Moviedbmainpage.css";
 import Moviessvg from "./images/moviessvg.svg";
 import Videostreaming from "./images/Videostreaming.svg"

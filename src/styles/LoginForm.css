@@ -65,6 +65,12 @@
     border-radius: 5px;
     width: 50%;
 }
+.error-message{
+    text-align: center;
+}
+.error-message p{
+    color: red;
+}
 .submit-btn:hover{
     background-color: black;
     transition: 0.3s all ease;

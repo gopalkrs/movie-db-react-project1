@@ -1,8 +1,8 @@
 import React, { useState,useEffect } from 'react';
-import MovielistBox from './MovielistBox';
-import Header from './Header';
+import MovieCard from './components/MovieCard';
+import Header from './components/Header';
 import './styles/Homepage.css';
-import Footer from './Footer';
+import Footer from './components/Footer';
 import { HashLoader } from 'react-spinners';
 
 function Homepage(){
@@ -15,7 +15,7 @@ function Homepage(){
             setMovies(data);
             setLoading(false);
         });
-    },[movies]);
+    },[]);
 
     if(loading){
         return (
@@ -37,7 +37,7 @@ function Homepage(){
                     {movies.map((movie)=>{
                         const {id,title,poster,rating,genre} = movie;
                         return (
-                            <MovielistBox
+                            <MovieCard
                             key={id}
                             id={id}
                             title={title}

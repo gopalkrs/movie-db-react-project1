@@ -5,11 +5,17 @@
     min-height: 100vh;
     height: 100%;
 }
+.reviews-component{
+    margin-top:60px;
+    padding: 30px 5px 5px 0px;
+    border-top: 2px solid rgba(0,0,0,0.3);
+}
+
 .section-moviepage {
     margin-left: 20px;
     margin-right: 20px;
     padding: 10px;
-    background-color: rgb(228, 238, 241);
+    background-color: #feeafa;
 }
 .movie-page-title-rating {
     display: flex;
@@ -98,6 +104,7 @@
 
 
 /*REVIEW RATING STYLES */
+
 
 
 @media screen and (max-width:575px){

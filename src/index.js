@@ -2,8 +2,8 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import './index.css';
 import Moviepage from './Moviepage';
-import Homepage from './Homepage';
-import Homepageseries from './Homepageseries';
+import MoviesLibrary from './MoviesLibrary';
+import SeriesLibrary from './SeriesLibrary';
 import Seriespage from './Seriespage';
 import Moviedbmainpage from './Moviedbmainpage';
 
@@ -15,8 +15,8 @@ function App(){
         <Route exact path ="/movies/:movieId" component={Moviepage} />
         <Route exact path ="/series/:seriesId" component={Seriespage} />
         <Route exact path ="/" component={Moviedbmainpage} />
-        <Route exact path ="/movies" component={Homepage} />
-        <Route exact path ="/series" component={Homepageseries} />
+        <Route exact path ="/movies" component={MoviesLibrary} />
+        <Route exact path ="/series" component={SeriesLibrary} />
       </Switch>
     </Router>
   );

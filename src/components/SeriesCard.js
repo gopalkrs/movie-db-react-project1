@@ -1,13 +1,11 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-import "./styles/MovielistBox.css";
+import "../styles/MovieCard.css";
 
-function MovielistBox(props) {
-
+function SeriesCard(props) {
     const { id,title,poster,rating,genre } = props;
-
     return (
-        <Link to={`/movies/${id}`} className = "movie-list-item">
+        <Link to={`/series/${id}`} className = "movie-list-item">
             <div className="movie-list-item-wrapper">
                 <div className="movie-list-item-img">
                     <img src={poster} alt={title}/>
@@ -21,4 +19,4 @@ function MovielistBox(props) {
         </Link>
     );
 }
-export default MovielistBox;
+export default SeriesCard;

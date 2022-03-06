@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState} from 'react';
 import { v4 as uuidv4 } from 'uuid';
-import './styles/LoginForm.css';
+import '../styles/LoginForm.css';
 import axios from 'axios';
 
-function LoginForm({isLogin, setIsLogin, setRegState, regState, setPopupForm, popupForm}) {
+function LoginForm({isLogin, regState, setPopupForm, popupForm, setIsLogged}) {
 
     const [signupData, setsignupData] = useState({
         username : "",
@@ -15,6 +15,7 @@ function LoginForm({isLogin, setIsLogin, setRegState, regState, setPopupForm, po
         password : ""
     });
 
+    const [loginMessage, setLoginMessage] = useState();
 
     const cancelClickHandler=()=>{
         setPopupForm({
@@ -28,6 +29,7 @@ function LoginForm({isLogin, setIsLogin, setRegState, regState, setPopupForm, po
             setloginData({ email: "", password: ""});
         }
     }
+
 
     const inputHandler=(e)=>{
         const name = e.target.name;
@@ -46,6 +48,7 @@ function LoginForm({isLogin, setIsLogin, setRegState, regState, setPopupForm, po
             const postSignup = {...signupData, id : uuidv4()};
             try{
                 const promiseData = await axios.post(`/api/user/signup`, postSignup);
+                setLoginMessage(promiseData.data.message);
             }catch(err){
                 console.log(err);
             }
@@ -54,12 +57,25 @@ function LoginForm({isLogin, setIsLogin, setRegState, regState, setPopupForm, po
             const postLogin = {...loginData, id : uuidv4()};
             try{
                 const promiseData = await axios.post(`/api/user/login`, postLogin);
+                
+                //setMessage(dataPromise.data.message);
+                const {message} = promiseData.data;
+                const {token} = promiseData.data.data;
+                const {_id, username} = promiseData.data.data.existingUser;
+                setLoginMessage(message);
+                localStorage.setItem('userId', _id);
+                localStorage.setItem('userName', username);
+                localStorage.setItem('userToken', token);
+                localStorage.setItem('isLogged', true);
+                setIsLogged(JSON.parse(localStorage.getItem('isLogged')));
+
             }catch(err){
-                console.log(err);
+                const {message} = err.response.data;
+                setLoginMessage(message);
             }
         }
-        
-        cancelClickHandler();
+        window.location.reload(false);
+       //cancelClickHandler();
     }
 
     return (
@@ -73,9 +89,8 @@ function LoginForm({isLogin, setIsLogin, setRegState, regState, setPopupForm, po
                 </div>
                 <div style={{display: isLogin? 'none' : 'block'}} className="input-block">
                     <label htmlFor="username">FullName</label>
-                    <input type="text" required
+                    <input type="text"
                     autoComplete="off"
-                    value={signupData.username}
                     onChange={inputHandler}
                     name="username" id="username" />
                 </div>
@@ -84,7 +99,6 @@ function LoginForm({isLogin, setIsLogin, setRegState, regState, setPopupForm, po
                     <label htmlFor="email">Email</label>
                     <input type="email" required
                     autoComplete="off"
-                    value={signupData.email}
                     onChange={inputHandler}
                     name="email" id="email" />
                 </div>
@@ -93,7 +107,6 @@ function LoginForm({isLogin, setIsLogin, setRegState, regState, setPopupForm, po
                     <label htmlFor="password">Password</label>
                     <input type="password" required
                     autoComplete="off"
-                    value={signupData.password}
                     onChange={inputHandler}
                     name="password" id="password" />
                 </div>
@@ -104,6 +117,9 @@ function LoginForm({isLogin, setIsLogin, setRegState, regState, setPopupForm, po
                 </div>
                 <div className="button-class">
                     <button className="submit-btn" onClick={cancelClickHandler}>Cancel</button>
+                </div>
+                <div className='error-message'>
+                    <p>{loginMessage}</p>
                 </div>
                 </div>
             </div>

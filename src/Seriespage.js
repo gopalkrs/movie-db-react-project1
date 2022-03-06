@@ -1,21 +1,20 @@
 import React, { useState, useEffect } from "react";
-import Header from "./Header";
+import Header from "./components/Header";
 import "./styles/Moviepage.css";
-import Footer from "./Footer";
-import Reviews from "./reviews/Reviews";
+import Footer from "./components/Footer";
+import SeriesReviews from "./reviews/SeriesReviews";
 
 function Seriespage(props) {
     
     const [data, setData] = useState([]);
-    
+    const seriesId=props.match.params.seriesId;
     useEffect(()=>{
-        const seriesId=props.match.params.seriesId;
         fetch(`/api/series/${seriesId}`)
         .then((response)=>response.json())
         .then((seriesdata)=>{
             setData(seriesdata)
         });
-    },[data]);
+    },[]);
 
     return (
             <div className="movie-page-wrapper">
@@ -25,16 +24,16 @@ function Seriespage(props) {
                         <div className="movie-page-poster-container">
                             <img src={data.poster} alt={data.title}/>
                             <div className="movie-page-country-lang">
-                                <p className="moviepage-country"><i class="fas fa-globe-asia"></i>  {data.country}</p>
+                                <p className="moviepage-country"><i className="fas fa-globe-asia"></i>  {data.country}</p>
                                 <p><i class="fas fa-language"></i> {data.language}</p>
                             </div>
                         </div>
                         <div className="movie-page-title-rating">
                             <h3 className="movie-page-title">{data.title}</h3>
-                            <h3 className="movie-page-rating"><i class="fab fa-imdb"></i> {data.rating}</h3>
+                            <h3 className="movie-page-rating"><i className="fab fa-imdb"></i> {data.rating}</h3>
                         </div>
                         <h4 className="movie-page-genre">{data.genre}</h4>
-                        <p className="movie-runtime"><i class="fas fa-clock"></i> {data.runtime}</p>
+                        <p className="movie-runtime"><i className="fas fa-clock"></i> {data.runtime}</p>
                     </div>
                     <div className="released-date-movie-page">
                         <h4>Released</h4>
@@ -55,7 +54,7 @@ function Seriespage(props) {
                     </div>
                 </div>
                 <div className="rating-reviews">
-                    <Reviews />
+                    <SeriesReviews seriesId={seriesId} />
                 </div>
                 <Footer />
             </div>

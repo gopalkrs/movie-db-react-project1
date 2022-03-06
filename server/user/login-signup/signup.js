@@ -30,12 +30,16 @@ const signup = async(req, res, next)=>{
         }
     }
 
-    let newUser;
     try{
        await newCreatedUser.save();
     }catch(err){
         console.log(err);
     }
 
+
+    res.status(201).json({
+        status: "Success",
+        message: "Signup Successful."
+    })
 }
 module.exports = signup;

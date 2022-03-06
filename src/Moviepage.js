@@ -1,20 +1,21 @@
 import React, { useState, useEffect } from "react";
-import Header from "./Header";
-import Footer from "./Footer";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 import "./styles/Moviepage.css";
-import Reviews from "./reviews/Reviews";
+import MovieReviews from "./reviews/MovieReviews";
 
 function Moviepage(props) {
     const [data, setData]=useState([]);
 
+    const movieId=props.match.params.movieId;
     useEffect(()=>{
-        const movieId=props.match.params.movieId;
+        //const movieId=props.match.params.movieId;
         fetch(`/api/movies/${movieId}`)
         .then((response)=>response.json())
         .then((movieinfo)=>{
             setData(movieinfo);
         });
-    },[data]);
+    },[]);
 
         return (
             <div className="movie-page-wrapper">
@@ -30,10 +31,10 @@ function Moviepage(props) {
                         </div>
                         <div className="movie-page-title-rating">
                             <h2 className="movie-page-title">{data.title}</h2>
-                            <h3 className="movie-page-rating"><i class="fab fa-imdb"></i>{data.rating}</h3>
+                            <h3 className="movie-page-rating"><i className="fab fa-imdb"></i>{data.rating}</h3>
                         </div>
                         <h4 className="movie-page-genre">{data.genre}</h4>
-                        <p className="movie-runtime"><i class="fas fa-clock"></i>{data.runtime}</p>
+                        <p className="movie-runtime"><i className="fas fa-clock"></i>{data.runtime}</p>
                     </div>
                     <div className="released-date-movie-page">
                         <h4>Released</h4>
@@ -54,7 +55,7 @@ function Moviepage(props) {
                     </div>
                 </div>
                 <div className="rating-reviews">
-                    <Reviews />
+                    <MovieReviews moviesId={movieId} />
                 </div>
                 <Footer />
             </div>

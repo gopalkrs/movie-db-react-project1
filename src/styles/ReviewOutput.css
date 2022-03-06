@@ -1,0 +1,27 @@
+.review-output-div{
+    background-color: rgb(238, 238, 198);
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.review-output-header h4{
+    color: #000;
+    padding: 8px;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+    margin: 0px 5px 0px 5px;
+}
+.review-output-paragraph p{
+    color: #202020;
+    padding: 1px 0px;
+}
+.review-output-paragraph{
+    padding: 8px;
+}
+@media screen  and (max-width:429px) {
+    .review-output-paragraph p{
+        font-size: 18px;
+    }
+    .review-output-header h4{
+        font-size: 20px;
+    }
+}
