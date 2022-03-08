@@ -21,7 +21,7 @@ function MovieReviews ({moviesId}){
     }
     useEffect(()=>{
         getAllDatas();
-    }, []);
+    }, [getReviews]);
 
     const [post, setPost] = useState({
         review: "",

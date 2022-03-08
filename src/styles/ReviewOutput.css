@@ -21,6 +21,7 @@
 }
 .review-output-header button{
     border: none;
+    background-color: transparent;
 }
 .review-output-header button:hover{
     color: #404040;

@@ -18,7 +18,7 @@ function SeriesReviews ({seriesId}){
     }
     useEffect(()=>{
         getAllDatas();
-    }, []);
+    }, [getReviews]);
     
     const isLogged = JSON.parse(localStorage.getItem('isLogged'));
     const uId = localStorage.getItem('userId');
