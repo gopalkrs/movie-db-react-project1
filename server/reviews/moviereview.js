@@ -14,7 +14,6 @@ const moviereview = async (req, res, next)=>{
             {$push: {"user": {userid: userId, review: review, rating: rating}}}
         );
     
-        console.log(temp.result.value._id);
         reviewId = temp.result.value._id;
     }catch(err){
         console.log(err);

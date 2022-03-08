@@ -57,7 +57,7 @@ function MovieReviews ({moviesId}){
                         }
                     });
                     setMessage(promiseData.data.message);
-    
+
                     if(promiseData.data){
                         setPost({
                             review: "",
@@ -101,9 +101,9 @@ function MovieReviews ({moviesId}){
         </div>
         <div className="reviews-component">
             { getReviews.map((rev)=>{
-                const {userid, review, rating} = rev;
+                const {userid, review, rating, _id} = rev;
                 return (
-                    <ReviewOutput id={userid} review={review} rating={rating} key={userid}/>
+                    <ReviewOutput id={userid} review={review} rating={rating} content="moviereviews" key={userid} contentId={moviesId} reviewId={_id} />
                 );
             }) }
         </div>

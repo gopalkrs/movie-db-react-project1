@@ -97,11 +97,11 @@ function SeriesReviews ({seriesId}){
             </div>
             </form>
             </div>
-            <div>
+            <div className="reviews-component">
             { getReviews.map((rev)=>{
-                const {userid, review, rating} = rev;
+                const {userid, review, rating, _id} = rev;
                 return (
-                    <ReviewOutput id={userid} review={review} rating={rating} key={userid}/>
+                    <ReviewOutput id={userid} review={review} rating={rating} contentId={seriesId} content="seriesreviews" key={userid} reviewId={_id} />
                 );
             }) }
             </div>
