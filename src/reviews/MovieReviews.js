@@ -82,6 +82,7 @@ function MovieReviews ({moviesId}){
             <div className="rating-div">
                 <label htmlFor="rating">Rating: </label>
                 <select name="rating" id="rating" className="rating-dropdown" onChange={handlePosts} value={post.rating}>
+                    <option value=""></option>
                     <option value="1">&#11088;</option>
                     <option value="2">&#11088;&#11088;</option>
                     <option value="3">&#11088;&#11088;&#11088;</option>
