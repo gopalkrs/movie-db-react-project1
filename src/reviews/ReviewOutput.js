@@ -10,7 +10,7 @@ function ReviewOutput ({id, review, rating, contentId, reviewId, content}){
 
     const getData = async ()=>{
         try{
-            const data = await axios.get(`/api/user/${id}`);
+            const data = await axios.get(`${process.env.REACT_APP_API_URL}/api/user/${id}`);
             console.log(id);
             setName(data.data.data);
         }catch(err){
@@ -21,7 +21,7 @@ function ReviewOutput ({id, review, rating, contentId, reviewId, content}){
     const deleteReviewHandler = async ()=>{
         let uId = localStorage.getItem('userId');
         try{
-            const data = await axios.delete(`/api/user/${content}/${contentId}/${uId}/${reviewId}`);
+            const data = await axios.delete(`${process.env.REACT_APP_API_URL}/api/user/${content}/${contentId}/${uId}/${reviewId}`);
         }catch(err){
             console.log(err);
         }

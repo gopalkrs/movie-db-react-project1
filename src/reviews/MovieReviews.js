@@ -13,7 +13,7 @@ function MovieReviews ({moviesId}){
     const [getReviews, setGetReviews] = useState([]);
     const getAllDatas = async ()=>{
         try{
-            const data = await axios.get(`/api/user/moviereviews/${moviesId}`);
+            const data = await axios.get(`${process.env.REACT_APP_API_URL}/api/user/moviereviews/${moviesId}`);
             setGetReviews(data.data.data);
         }catch(err){
             console.log(err);
@@ -51,7 +51,7 @@ function MovieReviews ({moviesId}){
                 try{
                     const token = localStorage.getItem('userToken');
     
-                    const promiseData = await axios.post(`/api/user/moviereviews`, post, {
+                    const promiseData = await axios.post(`${process.env.REACT_APP_API_URL}/api/user/moviereviews`, post, {
                         'headers': {
                             'authorization': `Bearer ${token}`
                         }

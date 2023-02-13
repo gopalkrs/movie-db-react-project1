@@ -10,7 +10,7 @@ function SeriesReviews ({seriesId}){
     const [getReviews, setGetReviews] = useState([]);
     const getAllDatas = async ()=>{
         try{
-            const data = await axios.get(`/api/user/seriesreviews/${seriesId}`);
+            const data = await axios.get(`${process.env.REACT_APP_API_URL}/api/user/seriesreviews/${seriesId}`);
             setGetReviews(data.data.data);
         }catch(err){
             console.log(err);
@@ -50,7 +50,7 @@ function SeriesReviews ({seriesId}){
                 try{
                     const token = localStorage.getItem('userToken');
     
-                    const promiseData = await axios.post(`/api/user/seriesreviews`, post, {
+                    const promiseData = await axios.post(`${process.env.REACT_APP_API_URL}/api/user/seriesreviews`, post, {
                         'headers': {
                             'authorization': `Bearer ${token}`
                         }
