@@ -9,7 +9,7 @@ function Seriespage(props) {
     const [data, setData] = useState([]);
     const seriesId=props.match.params.seriesId;
     useEffect(()=>{
-        fetch(`/api/series/${seriesId}`)
+        fetch(`${process.env.REACT_APP_API_URL}/api/series/${seriesId}`)
         .then((response)=>response.json())
         .then((seriesdata)=>{
             setData(seriesdata)

@@ -10,7 +10,7 @@ function Moviepage(props) {
     const movieId=props.match.params.movieId;
     useEffect(()=>{
         //const movieId=props.match.params.movieId;
-        fetch(`/api/movies/${movieId}`)
+        fetch(`${process.env.REACT_APP_API_URL}/api/movies/${movieId}`)
         .then((response)=>response.json())
         .then((movieinfo)=>{
             setData(movieinfo);

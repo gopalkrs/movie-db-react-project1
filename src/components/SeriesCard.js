@@ -5,7 +5,7 @@ import "../styles/MovieCard.css";
 function SeriesCard(props) {
     const { id,title,poster,rating,genre } = props;
     return (
-        <Link to={`/series/${id}`} className = "movie-list-item">
+        <Link to={`${process.env.REACT_APP_API_URL}/series/${id}`} className = "movie-list-item">
             <div className="movie-list-item-wrapper">
                 <div className="movie-list-item-img">
                     <img src={poster} alt={title}/>

@@ -56,7 +56,7 @@ const login = async(req, res, next)=>{
             data: {
                 existingUser,
                 token
-            }
+            } 
         });
     }catch(err){
         console.log(err);

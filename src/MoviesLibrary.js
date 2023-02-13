@@ -9,7 +9,7 @@ function Homepage(){
     const [movies, setMovies] = useState([]);
     const [loading, setLoading] = useState(true);
     useEffect(()=>{
-        fetch(`/api/movies`)
+        fetch(`${process.env.REACT_APP_API_URL}/api/movies`)
         .then((response)=>response.json())
         .then((data)=>{
             setMovies(data);

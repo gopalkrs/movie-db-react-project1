@@ -11,7 +11,7 @@ function Homepageseries() {
     const [loading, setLoading] = useState(true);
 
     useEffect(()=>{
-        fetch(`/api/series`)
+        fetch(`${process.env.REACT_APP_API_URL}/api/series`)
         .then((response)=>response.json())
         .then((data)=>{
             setSeries(data);

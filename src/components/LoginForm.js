@@ -47,7 +47,7 @@ function LoginForm({isLogin, regState, setPopupForm, popupForm, setIsLogged}) {
         if(!isLogin){
             const postSignup = {...signupData, id : uuidv4()};
             try{
-                const promiseData = await axios.post(`/api/user/signup`, postSignup);
+                const promiseData = await axios.post(`${process.env.REACT_APP_API_URL}/api/user/signup`, postSignup);
                 setLoginMessage(promiseData.data.message);
             }catch(err){
                 console.log(err);
@@ -56,7 +56,7 @@ function LoginForm({isLogin, regState, setPopupForm, popupForm, setIsLogged}) {
         if(isLogin){
             const postLogin = {...loginData, id : uuidv4()};
             try{
-                const promiseData = await axios.post(`/api/user/login`, postLogin);
+                const promiseData = await axios.post(`${process.env.REACT_APP_API_URL}/api/user/login`, postLogin);
                 
                 //setMessage(dataPromise.data.message);
                 const {message} = promiseData.data;
